@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: center;
+}
+
+ul li {
+    list-style: none;
+}
+
+.outer {
+    width: 640px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+
+.img-list li {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.img-list li.activeImg{
+    z-index: 3;
+    opacity: 1;
+}
