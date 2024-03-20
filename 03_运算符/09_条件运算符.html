@@ -13,6 +13,7 @@
                     条件运算符在执行时，会先对条件表达式进行求值判断，
                         如果结果为true，则执行表达式1
                         如果结果为false，则执行表达式2
+                - null, undefined, '', NaN, 0, 为false，其他为true
         */
 
         // false ? alert(1) : alert(2)
@@ -23,6 +24,14 @@
         let max = a > b ? a : b
 
         // alert(max)
+
+        console.log("-------------")
+        console.log(result)
+        console.log(null?1:2);
+        console.log(""?1:2);
+        console.log(undefined?1:2);
+        console.log(0?1:2);
+        console.log(NaN?1:2);
 
     </script>
 </head>
