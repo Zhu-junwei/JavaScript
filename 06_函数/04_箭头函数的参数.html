@@ -6,33 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        const fn = (a, b) => {
-            console.log("a =", a);
-            console.log("b =", b);
-        }
-
-
         // 当箭头函数中只有一个参数时，可以省略()
-        const fn2 = a => {
+        const fn = a => {
             console.log("a =", a);
         }
+        fn(123)
 
-
-        // fn2(123)
+        const fn2 = (a, b) => {
+            console.log("a =", a, "b =", b);
+        }
+        fn2(1, 2);
 
         // 定义参数时，可以为参数指定默认值
         // 默认值，会在没有对应实参时生效
-        const fn3 = (a=10, b=20, c=30) => {
-            console.log("a =", a);
-            console.log("b =", b);
-            console.log("c =", c);
+        const fn3 = (a = 10, b = 20, c = 30) => {
+            console.log("a =", a, "b =", b, "c =", c);
         }
-
         fn3(1, 2)
 
     </script>
 </head>
 <body>
-    
+
 </body>
 </html>

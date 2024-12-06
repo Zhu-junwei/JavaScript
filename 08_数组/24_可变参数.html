@@ -23,26 +23,26 @@
                 //     console.log(arguments[i])
                 // }
 
-                // for(let v of arguments){
-                //     console.log(v)
-                // }
+                for(let v of arguments){
+                    console.log(v)
+                }
 
-                arguments.forEach((ele) => console.log(ele))
+                // 它不是一个数组对象，不能调用数组的方法
+                // arguments.forEach((ele) => console.log(ele))
             }
 
-            // fn(1, 10, 33)
+            fn(1, 10, 33)
 
             // 定义一个函数，可以求任意个数值的和
             function sum() {
                 // 通过arguments，可以不受参数数量的限制更加灵活的创建函数
                 let result = 0
-
                 for (let num of arguments) {
                     result += num
                 }
-
                 return result
             }
+            console.log(sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)); // 55
 
             /* 
                 可变参数，在定义函数时可以将参数指定为可变参数
@@ -54,12 +54,14 @@
             */
 
             function fn2(...abc) {
-                console.log(abc)
+                console.log(abc.join())
             }
+            fn2(123, 456, "hello", true, "1111")
 
             function sum2(...num) {
                 return num.reduce((a, b) => a + b, 0)
             }
+            console.log(sum2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)); // 55
 
             // 当可变参数和普通参数一起使用时，需要将可变参数写到最后
             function fn3(a, b, ...args) {
@@ -69,7 +71,6 @@
 
                 console.log(args)
             }
-
             fn3(123, 456, "hello", true, "1111")
         </script>
     </head>

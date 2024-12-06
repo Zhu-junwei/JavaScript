@@ -10,13 +10,12 @@
 提取码：8c1x
 
 ## 视频资源
-| 资源 | 网站 |
-|----|----|
-|  B站视频教程  |  https://www.bilibili.com/video/BV1mG411h7aD/  |
-|  李立超老师官网JavaScript教程  |  https://www.lilichao.com/index.php/2022/08/02/javascript%e5%9f%ba%e7%a1%80%e8%a7%86%e9%a2%91%e6%95%99%e7%a8%8b/  |
 
 
-## 视频大纲
+[B站视频教程](https://www.bilibili.com/video/BV1mG411h7aD/)
+
+~~[李立超老师官网JavaScript教程](https://lilichao.com/?p=6339)~~
+
 
 | 视频位置 | 目录 | 简介 |
 |------|----|----|

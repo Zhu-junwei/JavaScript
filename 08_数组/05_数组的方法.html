@@ -10,13 +10,12 @@
 
             /* 
                 indexOf()
-                    - 获取元素在数组中第一次出现的索引
+                    - 获取元素在数组中第一次出现的索引, 如果没有找到则返回-1
                     - 参数：
                         1. 要查询的元素
-                        2. 查询的其实位置
+                        2. 开始查询的其实位置
                 lastIndexOf()
-                    - 获取元素在数组中最后一次出现的位置
-
+                    - 向后搜索数组,获取元素在数组中最后一次出现的位置
                     - 返回值：
                         找到了则返回元素的索引，
                         没有找到返回-1
@@ -33,28 +32,28 @@
                         1. 截取的起始位置（包括该位置）
                         2. 截取的结束位置（不包括该位置）   
                             - 第二个参数可以省略不写，如果省略则会一直截取到最后
-                            - 索引可以是负值
+                            - 索引可以是负值，表示从数组末尾开始计数
 
                         如果将两个参数全都省略，则可以对数组进行浅拷贝（浅复制）
             
             */
 
-            let result = arr.indexOf("沙和尚", 3)
-            result = arr.lastIndexOf("沙和尚", 3)
-            result = arr.indexOf("白骨精")
+            arr = ["孙悟空", "猪八戒", "沙和尚", "唐僧", "沙和尚"]
+            console.log(arr.indexOf("沙和尚")); // 2
+            console.log(arr.indexOf("沙和尚", 3)); // 4
+            console.log(arr.indexOf("白骨精")); // -1
+            console.log(arr.lastIndexOf("沙和尚", 3)); // 2
 
-            result = arr.join()
-            result = arr.join("@-@")
-            result = arr.join("")
+            console.log(arr.join()); // 孙悟空,猪八戒,沙和尚,唐僧,沙和尚
+            console.log(arr.join("@-@")); // 孙悟空@-@猪八戒@-@沙和尚@-@唐僧@-@沙和尚
+            console.log(arr.join("")); // 孙悟空猪八戒沙和尚唐僧沙和尚
 
             arr = ["孙悟空", "猪八戒", "沙和尚", "唐僧"]
-            result = arr.slice(0, 2)
-            result = arr.slice(1, 3)
-            result = arr.slice(1, -1)
-
-            result = arr.slice()
-
-            console.log(result)
+            console.log(arr.slice()); // ["孙悟空", "猪八戒", "沙和尚", "唐僧"]
+            console.log(arr.slice(1)); // ['猪八戒', '沙和尚', '唐僧']
+            console.log(arr.slice(0, 2)); // ['孙悟空', '猪八戒']
+            console.log(arr.slice(1, 3)); // ['猪八戒', '沙和尚']
+            console.log(arr.slice(1, -1)); // ['猪八戒', '沙和尚']
 
         </script>
     </head>

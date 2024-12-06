@@ -24,20 +24,21 @@
             let [d, e, f, g] = ["唐僧", "白骨精", "蜘蛛精", "玉兔精"] // 声明同时解构
 
             console.log(d, e, f, g)
+
             // ;[d, e, f, g] = [1, 2, 3]
             // ;[d, e, f = 77, g = 10] = [1, 2, 3]
             ;[d, e, f = 77, g = g] = [1, 2, 3]
+            console.log(d, e, f, g)
 
             let [n1, n2, ...n3] = [4, 5, 6, 7] // 解构数组时，可以使用...来设置获取多余的元素
-
-            // console.log(n1, n2, n3)
-
+            console.log(n1, n2, n3) // 4, 5, [6, 7]
 
             function fn(){
                 return ["二郎神", "猪八戒"]
             }
 
             let [name1, name2] = fn()
+            console.log(name1, name2) // 二郎神 猪八戒
 
             // 可以通过解构赋值来快速交换两个变量的值
             let a1 = 10

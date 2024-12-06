@@ -36,29 +36,27 @@
                             - 数组（Array []）
                         4. JSON的格式和JS对象的格式基本上一致的，
                             注意：JSON字符串如果属性是最后一个，则不要再加,
-
-
             */
 
             const obj = {
                 name: "孙悟空",
                 age: 18,
             }
+            console.log(obj)
 
             // 将obj转换为JSON字符串
             const str = JSON.stringify(obj) //JSON.stringify() 可以将一个对象转换为JSON字符串
+            console.log(str) // {"name":"孙悟空","age":18}
 
             const obj2 = JSON.parse(str) // JSON.parse() 可以将一个JSON格式的字符串转换为JS对象
-
-            // console.log(obj)
-            // console.log(str) // {"name":"孙悟空","age":18}
-            // console.log(obj2)
+            console.log(obj2)
 
             const str2 = `{"name":"猪八戒","age":28}`
             const str3 = "{}"
             const str4 = '["hello", true, []]'
-
             console.log(str2)
+            console.log(str3)
+            console.log(str4)
         </script>
     </head>
     <body></body>

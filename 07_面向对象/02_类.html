@@ -41,47 +41,13 @@
 
 
             const p1 = new Person()  // 调用构造函数创建对象
-            const p2 = new Person()
 
             const d1 = new Dog()
-            const d2 = new Dog()
 
             console.log(p1 instanceof Person) // true
             console.log(d1 instanceof Person) // false
+            console.log(d1 instanceof Dog) // true
 
-
-
-            const five = {
-                // 添加属性
-                name: "王老五",
-                age: 48,
-                height: 180,
-                weight: 100,
-
-                // 添加方法
-                sleep() {
-                    console.log(this.name + "睡觉了~")
-                },
-
-                eat() {
-                    console.log(this.name + "吃饭了~")
-                },
-            }
-
-
-            const yellow = {
-                name: "大黄",
-                age: 3,
-                sleep() {
-                    console.log(this.name + "睡觉了~")
-                },
-
-                eat() {
-                    console.log(this.name + "吃饭了~")
-                },
-            }
-
-            
         </script>
     </head>
     <body></body>

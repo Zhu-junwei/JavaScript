@@ -18,8 +18,11 @@
             function fn() {
                 console.log("函数执行了~", this)
             }
+            fn() // window
+
 
             const obj = { name: "孙悟空", fn }
+            obj.fn() // obj对象
 
             /* 
                 调用函数除了通过 函数() 这种形式外，还可以通过其他的方式来调用函数
@@ -39,8 +42,8 @@
                 console.log("a =", a, "b =", b, this)
             }
 
-            // fn2.call(obj, "hello", true)
-            fn2.apply(obj, ["hello", true])
+            fn2.call(obj, "hello", true) // this是obj对象
+            fn2.apply(obj, ["hello", true]) // this是obj对象
         </script>
     </head>
     <body></body>

@@ -9,17 +9,23 @@
             const d = new Date()
 
             let result = d.toLocaleDateString() // 将日期转换为本地的字符串
+            console.log(result); // 2024/11/23
             result = d.toLocaleTimeString() // 将时间转换为本地的字符串
+            console.log(result); // 13:41:29
 
             /* 
             toLocaleString()
                 - 可以将一个日期转换为本地时间格式的字符串
                 - 参数：
+
+                ...
+
                     1. 描述语言和国家信息的字符串
                         zh-CN 中文中国
                         zh-HK 中文香港
                         en-US 英文美国
-                    2. 需要一个对象作为参数，在对象中可以通过对象的属性来对日期的格式进行配置
+                    2. 需要一个对象作为参数，在
+                    对象中可以通过对象的属性来对日期的格式进行配置
                             dateStyle 日期的风格
                             timeStyle 时间的风格
                                 full

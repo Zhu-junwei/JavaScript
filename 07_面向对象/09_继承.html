@@ -11,7 +11,7 @@
         /* 
             继承
                 - 通过继承可以在不修改一个类的情况下对其进行扩展
-                - OCP 开闭原则
+                - OCP 开闭原则, Open-Closed Principle
                     - 程序应该对修改关闭，对扩展开放
 
         */
@@ -27,30 +27,23 @@
         }
 
         class Dog extends Animal{
-
             // 在子类中，可以通过创建同名方法来重写父类的方法
             sayHello(){
                 console.log("汪汪汪")
             }
-            
         }
 
         class Cat extends Animal{
-
             // 重写构造函数
             constructor(name, age){
                 // 重写构造函数时，构造函数的第一行代码必须为super()
                 super(name) // 调用父类的构造函数
-
                 this.age = age
-
             }
             
             sayHello(){
-
                 // 调用一下父类的sayHello
                 super.sayHello() // 在方法中可以使用super来引用父类的方法
-
                 console.log("喵喵喵")
             }
         }

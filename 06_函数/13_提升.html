@@ -1,50 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <script>
-            /* 
-                变量的提升
-                    - 使用var声明的变量，它会在所有代码执行前被声明
-                        所以我们可以在变量声明前就访问变量
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <script>
+        /*
+            变量的提升
+                - 使用 var 声明的变量会被提升到当前作用域的顶部，实际上是在代码运行前由解释器完成的。
+                  这意味着变量在声明之前是可以访问的，但值是 undefined
 
-                函数的提升
-                    - 使用函数声明创建的函数，会在其他代码执行前被创建
-                        所以我们可以在函数声明前调用函数
-
-
-                let声明的变量实际也会提升，但是在赋值之前解释器禁止对该变量的访问
-
-            */
-
-            console.log(b)
-
-            let b = 10
+            函数的提升
+                - 使用函数声明创建的函数，会在其他代码执行前被创建
+                    所以我们可以在函数声明前调用函数
 
 
-            // fn()
+            let 和 const 声明的变量实际上也会提升到作用域的顶部，但它们不会被初始化。
+            因此在声明之前访问这些变量会导致 ReferenceError，这个现象称为“暂时性死区（TDZ, Temporal Dead Zone）”。
 
-            function fn(){
-                alert("我是fn函数~")
-            }
+        */
 
-            // fn2()
-            // var fn2 = function(){
+        console.log(x); // undefined
+        var x = 5;
 
-            // }
-
-
-
-            // console.log(a)
-
-            var a = 10
+        try {
+            console.log(y); // ReferenceError: Cannot access 'y' before initialization
+            let y = 10;
+        } catch (e) {
+            console.log(e.name + ": " + e.message); // ReferenceError: Cannot access 'y' before initialization
+        }
 
 
-            // a = 10 // window.a = 10
-        </script>
-    </head>
-    <body></body>
+        try {
+            console.log(z); // ReferenceError: Cannot access 'z' before initialization
+            const z = 15;
+
+        } catch (e) {
+            console.log(e.name + ": " + e.message); // ReferenceError: Cannot access 'z' before initialization
+        }
+
+        console.log(foo()); // "Hello, world!"
+        function foo() {
+            return "Hello, world!";
+        }
+
+        try {
+            bar(); // TypeError: bar is not a function
+            var bar = function () {
+                return "This is bar";
+            };
+        } catch (e) {
+            console.log(e.name + ": " + e.message);
+        }
+
+
+    </script>
+</head>
+<body></body>
 </html>

@@ -26,15 +26,14 @@
             */
 
             function fn(a, b, c) {
-                console.log("fn执行了~~~~", this)
-                console.log(a, b, c)
+                console.log("fn执行了~~~~", this, a, b, c)
             }
 
             const obj = {name:"孙悟空"}
 
             const newFn = fn.bind(obj, 10, 20, 30)
 
-            // newFn()
+            newFn() // this指向obj
 
 
             const arrowFn = () => {

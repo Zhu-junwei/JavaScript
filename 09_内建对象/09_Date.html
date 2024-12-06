@@ -32,19 +32,21 @@
 
 
             // new Date(年份, 月, 日, 时, 分, 秒, 毫秒)
-            d = new Date(2016, 0, 1, 13, 45, 33)
 
             d = new Date()
+            d = new Date(2024, 10, 23, 13, 32, 33) // 月份是0-11，日期是1-31，时分秒是0-59，毫秒是0-999
 
+            console.log(d.getFullYear()); // 2024
+            console.log(d.getMonth()); // 11
+            console.log(d.getDate()); // 23
+            console.log(d.getDay()); // 6 , 代表周六
+            console.log(d.getHours()); // 13
+            console.log(d.getMinutes()); // 32
+            console.log(d.getSeconds()); // 33
+            console.log(d.getMilliseconds()); // 0
 
-            result = d.getFullYear()
-            result = d.getMonth()
-            result = d.getDate()
-            result = d.getDay()
+            console.log(d.getTime());
 
-            result = d.getTime()
-
-            console.log(result) // 1659088108520 毫秒
         </script>
     </head>
     <body></body>

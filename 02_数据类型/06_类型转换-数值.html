@@ -27,38 +27,33 @@
                         - 解析时，会自左向右读取一个字符串，直到读取到字符串中所有的有效的小数
 
         */
-        let a = '123' // 123
-        a = 'abc' // NaN
-        a = '3.1415926' // 3.1415926
-        a = '11px' // NaN
-        a = ''  // 0
-        a = '    ' // 0
+        let a = '123'
+        console.log(a, Number(a), parseInt(a), parseFloat(a)); //123 123 123 123
+        a = 'abc'
+        console.log(a, Number(a), parseInt(a), parseFloat(a)); // abc NaN NaN NaN
+        a = '3.1415926'
+        console.log(a, Number(a), parseInt(a), parseFloat(a)); // 3.1415926 3.1415926 3 3.1415926
+        a = ''
+        console.log(a, Number(a), parseInt(a), parseFloat(a)); //  0 NaN NaN
+        a = '   '
+        console.log(a, Number(a), parseInt(a), parseFloat(a)); //     0 NaN NaN
+        a = true
+        console.log(a, Number(a), parseInt(a), parseFloat(a)); // true 1 NaN NaN
+        a = false
+        console.log(a, Number(a), parseInt(a), parseFloat(a)); // false 0 NaN NaN
+        a = null
+        console.log(a, Number(a), parseInt(a), parseFloat(a)); // null 0 NaN NaN
+        a = undefined
+        console.log(a, Number(a), parseInt(a), parseFloat(a)); // undefined NaN NaN NaN
 
-        a = true // 1
-        a = false // 0
-
-        a = null // 0
-        a = undefined // NaN
-
-        // console.log(typeof a, a)
-
-        a = Number(a)
-        // console.log(typeof a, a)
-        
-        let b = '123px'
-        b = 'a123'
-        b = '123.45'
-        // b = 456.123
-        console.log(typeof b, b)
-
-        b = parseInt(b)
-        console.log(typeof b, b)
-        
-        
+        a = '11px'
+        console.log(a, Number(a), parseInt(a), parseFloat(a)); // 11px NaN 11 11
+        a = '11.5%'
+        console.log(a, Number(a), parseInt(a), parseFloat(a)); // 11.5% NaN 11 11.5
 
     </script>
 </head>
 <body>
-    
+
 </body>
 </html>

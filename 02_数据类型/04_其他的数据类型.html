@@ -38,28 +38,28 @@
                 七种原始值是构成各种数据的基石
                     原始值在JS中是不可变类型，一旦创建就不能修改
         */
-       let bool = true // 真
-       bool = false // 假
-       let num = 1
-
-       let a = null
-
-    //    console.log(typeof bool)
-    //    console.log(typeof a)
-
-    //    let b
-       console.log(typeof b)
-
-       let c = Symbol() // 调用Symbol()创建了一个符号
-
-       console.log(typeof c)
-       
-       
-       
+        let v = 10;
+        console.log(typeof v); // number
+        v = 10n;
+        console.log(typeof v); // bigint
+        v = "hello";
+        console.log(typeof v); // string
+        v = true // 真
+        console.log(typeof v); // boolean
+        let a = null
+        console.log(typeof a + " => " + (a === null)) // object 直接使用 typeof 无法准确判断一个值是否为 null 类型
+        // let b
+        console.log(typeof b) // undefined
+        // Symbol 是 ES2015 新引入的一种原始类型的值。它类似于字符串，
+        // 但是每一个 Symbol 值都是独一无二的，与其他任何值都不相等。
+        let s1 = Symbol() // 调用Symbol()创建了一个符号
+        let s2 = Symbol() // 调用Symbol()创建了一个符号
+        console.log(typeof s1) // symbol
+        console.log(s1 === s2) // false
 
     </script>
 </head>
 <body>
-    
+
 </body>
 </html>

@@ -26,31 +26,22 @@
                         对于undefined，直接转换为"undefined"
 
         */
-        let a = 10 // "10"
-        a = true // "true"
-        a = 11n  // "11"
+        let a = 10
+        console.log(typeof a, typeof a.toString(), typeof String(a)); // number string string
+        a = 11n
+        console.log(typeof a, typeof a.toString(), typeof String(a)); // bigint string string
+        a = "hello"
+        console.log(typeof a, typeof a.toString(), typeof String(a)); // string string string
+        a = true
+        console.log(typeof a, typeof a.toString(), typeof String(a)); // boolean string string
         a = undefined
-        // console.log(typeof a, a)
-
-        // a = a.toString() // "10"
-        // console.log(typeof a, a)
-
-        let b = 33 // "33"
-        b = null // "null"
-        b = undefined // "undefined"
-        b = true
-
-        console.log(typeof b, b)
-
-        b = String(b)
-
-        console.log(typeof b, b)
-        
-        
+        console.log(typeof a, typeof String(a)); // undefined string
+        a = null
+        console.log(typeof a, typeof String(a)); // object string
 
     </script>
 </head>
 <body>
-    
+
 </body>
 </html>

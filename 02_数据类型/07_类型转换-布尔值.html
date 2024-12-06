@@ -24,29 +24,29 @@
                 - 所有表示空性的没有的错误的值都会转换为false：
                     0、NaN、空串、null、undefined、false
         */
+
         let a = 1 // true
-        a = -1 // true
-        a = 0 // false
+        console.log(a, Boolean(a)); // 1 true
+        a = 0;
+        console.log(a, Boolean(a)); // 0 false
         a = NaN // false
-        a = Infinity // true
+        console.log(a, Boolean(a)); // NaN false
 
-        a = 'abc' // true
-        a = 'true' // true
-        a = 'false' // true
-        a = '' // false
-        a = " " // true
+        a = 'hello' // true
+        console.log(a, Boolean(a)); // hello true
+        a = ' '
+        console.log(a, Boolean(a)); // " " true
+        a = ''
+        console.log(a, Boolean(a)); // "" false
+
         a = null
+        console.log(a, Boolean(a)); // null false
         a = undefined
+        console.log(a, Boolean(a)); // undefined false
 
-        console.log(typeof a, a)
-
-        a = Boolean(a)
-
-        console.log(typeof a, a)
-        
     </script>
 </head>
 <body>
-    
+
 </body>
 </html>

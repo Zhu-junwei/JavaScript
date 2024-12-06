@@ -8,21 +8,17 @@
     <script>
         const arr = ["孙悟空", "猪八戒", "沙和尚"]
 
-        // const arr2 = arr  // 不是复制
-        // arr2[0] = "唐僧"
+        const arr2 = arr  // 不是复制
+        console.log(arr === arr2) // true，一样的引用地址
 
-        // 如何去复制一个对象 复制必须要产生新的对象
         // 当调用slice时，会产生一个新的数组对象，从而完成对数组的复制
         const arr3 = arr.slice()
+        console.log(arr === arr3) // false
 
-
-        // console.log(arr === arr2)
-        // console.log(arr2)
-
+        // 修改完复制后的数组后，原来的数组不变
         arr3[0] = "唐僧"
-
-        console.log(arr)
-        console.log(arr3)
+        console.log(arr.join())
+        console.log(arr3.join())
 
     </script>
 </head>

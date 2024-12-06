@@ -47,13 +47,14 @@
             map.set("name", "孙悟空")
             map.set(obj2, "呵呵")
             map.set(NaN, "哈哈哈")
+            console.log(map)
 
             map.delete(NaN)
-            // map.clear()
 
-            console.log(map)
             console.log(map.get("name"))
             console.log(map.has("name"))
+            map.clear()
+            console.log(map.size);
         </script>
     </head>
     <body></body>

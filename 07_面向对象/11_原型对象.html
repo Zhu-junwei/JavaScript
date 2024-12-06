@@ -17,7 +17,9 @@
 
             const p = new Person()
 
-            // console.log(p)
+            console.log(p instanceof Person) // true
+            console.log(p.__proto__ instanceof Object) // true
+            console.log(Object.getPrototypeOf(p) instanceof Object); // true
 
             /* 
                 访问一个对象的原型对象
@@ -47,12 +49,7 @@
             // console.log(p.__proto__.__proto__.__proto__)
             // console.log(p.constructor)
 
-            // console.log(Object.getPrototypeOf(p) === p.__proto__)
-
             const obj = {} // obj.__proto__
-
-            
-
 
         </script>
     </head>

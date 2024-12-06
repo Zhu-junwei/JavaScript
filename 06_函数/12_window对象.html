@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>12_window对象</title>
     <script>
         /* 
             Window对象
@@ -16,12 +16,12 @@
                 
         */
 
-        // alert(window)
+        console.log(window);
+        window.console.log("哈哈")
         // window.alert(123)
-        // window.console.log("哈哈")
 
         window.a = 10 // 向window对象中添加的属性会自动成为全局变量
-        // console.log(a)
+        console.log(a)
 
         /* 
             var 用来声明变量，作用和let相同，但是var不具有块作用域
@@ -29,38 +29,29 @@
                 - 使用function声明的函数，都会作为window的方法保存
                 - 使用let声明的变量不会存储在window对象中，而存在一个秘密的小地方（无法访问）
                 - var虽然没有块作用域，但有函数作用域
-
         */
 
-        var b = 20 // window.b = 20
+        var b = 20 // = window.b = 20
+        console.log(b, window.b) // 20 20
 
-        function fn(){
-            alert('我是fn')
+        let c = 33
+        console.log(c, typeof window.c) // 33 'undefined'
+
+        function fn() {
+            console.log('我是fn')
         }
+        window.fn()
 
-        // console.log(window.b)
-
-        // window.fn()
-
-        // let c = 33
-        window.c = 44
-        // console.log(c)
-
-        function fn2(){
+        function fn2() {
             // var d = 10 // var虽然没有块作用域，但有函数作用域
-            d = 10 // 在局部作用域中，如果没有使用var或let声明变量，则变量会自动成为window对象的属性 也就是全局变量
-
+            d = 99 // 在局部作用域中，如果没有使用var或let声明变量，则变量会自动成为window对象的属性 也就是全局变量
         }
-
         fn2()
-
-        console.log(d)
-       
-
+        console.log(d) // 99
 
     </script>
 </head>
 <body>
-    
+
 </body>
 </html>
